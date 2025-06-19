@@ -153,6 +153,14 @@
       transition: .4s;
       border-radius: 50%;
     }
+    
+    .logo-container-black {
+      background-color: black;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
 
     input:checked + .slider {
       background-color: #0077b5;
@@ -177,6 +185,7 @@
 
 <header>
   <nav>
+    <a href="index.html">Accueil</a>
     <a href="formations.html">Formations</a>
     <a href="projets.html">Projets</a>
     <a href="experiences.html">Expériences professionnelles</a>
@@ -200,7 +209,9 @@
 
 <section class="school-section">
   <div class="school-entry">
+    <div class="logo-container-black">
     <img src="https://raw.githubusercontent.com/arthur5775/arthur5775.github.io/main/school_s_logos/CentraleSupelec.svg" alt="Logo CentraleSupélec">
+    </div>
     <div class="school-text">
       <h3>CentraleSupélec</h3>
       <p>Rennes dans le cadre du programme FreeMoov.</p>
@@ -208,7 +219,9 @@
   </div>
 
   <div class="school-entry reverse">
+    <div class="logo-container-black">
     <img src="/school_s_logos/Heriot-Watt_University.svg" alt="Logo Heriot-Watt University">
+    </div>
     <div class="school-text">
       <h3>Heriot-Watt University</h3>
       <p>Semestre d'échange à Édimbourg (Écosse) avec des cours de Big Data, statistiques et bases de données.</p>
@@ -216,7 +229,9 @@
   </div>
 
   <div class="school-entry">
+    <div class="logo-container-black">
     <img src="/school_s_logos/ISEN.svg" alt="Logo ISEN">
+    </div>
     <div class="school-text">
       <h3>ISEN Nantes</h3>
       <p>test test </p>
@@ -224,7 +239,9 @@
   </div>
 
   <div class="school-entry reverse">
+    <div class="logo-container-black">
     <img src="/school_s_logos/Fabert.svg" alt="Logo Lycée Fabert">
+    </div>
     <div class="school-text">
       <h3>Lycée Fabert</h3>
       <p>Baccalauréat scientifique obtenu à Metz</p>
@@ -257,4 +274,11 @@
   });
 
   document.getElementById('langToggle').addEventListener('change', function () {
-    if (this.checked)
+    if (this.checked) {
+      window.location.href = 'formationsUK.html';
+    }
+  });
+</script>
+
+</body>
+</html>
