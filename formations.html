@@ -1,59 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>School Logos</title>
+  <title>Arthur Grossmann Le Mauguen CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 20px;
-      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
       background-color: #f9f9f9;
+      color: #333;
     }
-    .logo-container {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px;
-      background-color: #000; <!-- fff-->
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      width: 200px;
+
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 0;
       text-align: center;
     }
-    .logo-container img {
-      max-width: 100%;
-      height: auto;
+
+    nav {
+      margin-top: 10px;
     }
-    header {
-      background-color: #333;
+
+    nav a {
       color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      margin: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-weight: normal;
+      color: #555;
+    }
+
+    .school-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .school-entry {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      max-width: 900px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .school-entry img {
+      width: 100px;
+      height: auto;
+      margin: 10px;
+      flex-shrink: 0;
+    }
+
+    .school-text {
+      flex: 1;
+      padding: 10px 20px;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
       padding: 15px 20px;
+      margin-top: 30px;
+    }
+
+    .footer-buttons {
+      margin-top: 15px;
+    }
+
+    .footer-buttons a {
+      text-decoration: none;
+      color: white;
+      background-color: #0072c6;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .footer-buttons a.linkedin {
+      background-color: #0077b5;
+    }
+
+    .linkedin-title {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.8em;
+      color: #0077b5;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #0077b5;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    @media (max-width: 768px) {
+      .school-entry {
+        flex-direction: column !important;
+        text-align: center !important;
+      }
+      .school-text {
+        padding: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <a href="#formation">Formation</a>
-    <a href="#experience">Expérience Professionnelle</a>
-    <a href="#contact">Contact</a>
-  </header>
-  <div class="logo-container">
-    <img src="/school_s_logos/Fabert.svg" alt="Logo Lycée Fabert">
-    <p>Lycée Fabert Metz</p>
-  </div>
-  <div class="logo-container">
-    <img src="/school_s_logos/ISEN.svg" alt="Logo ISEN">
-    <p>ISEN Nantes</p>
-  </div>
-  <div class="logo-container">
-    <img src="/school_s_logos/Heriot-Watt_University.svg" alt="Logo Heriot Watt University">
-    <p>Heriot Watt University Édimbourg</p>
-  </div>
-  <div class="logo-container">
+
+<header>
+  <nav>
+    <a href="formations.html">Formations</a>
+    <a href="projets.html">Projets</a>
+    <a href="experiences.html">Expériences professionnelles</a>
+    <a href="engagements.html">Engagements associatifs</a>
+    <a href="contact.html">Contact</a>
+    <div style="display: inline-flex; align-items: center; gap: 8px; margin-left: 20px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="Français" title="Français" style="height: 18px; max-width: 30px;">
+      <label class="switch" title="Passer en version anglaise">
+        <input type="checkbox" id="langToggle">
+        <span class="slider round"></span>
+      </label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="English" title="English" style="height: 18px; max-width: 30px;">
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Arthur Grossmann Le Mauguen</h1>
+  <h2>Étudiant en école d'ingénieur en M2</h2>
+</section>
+
+<section class="school-section">
+  <div class="school-entry">
     <img src="https://raw.githubusercontent.com/arthur5775/arthur5775.github.io/main/school_s_logos/CentraleSupelec.svg" alt="Logo CentraleSupélec">
-    <p>CentraleSupélec Rennes</p>
+    <div class="school-text">
+      <h3>CentraleSupélec</h3>
+      <p>Rennes dans le cadre du programme FreeMoov.</p>
+    </div>
   </div>
-</body>
-</html>
+
+  <div class="school-entry reverse">
+    <img src="/school_s_logos/Heriot-Watt_University.svg" alt="Logo Heriot-Watt University">
+    <div class="school-text">
+      <h3>Heriot-Watt University</h3>
+      <p>Semestre d'échange à Édimbourg (Écosse) avec des cours de Big Data, statistiques et bases de données.</p>
+    </div>
+  </div>
+
+  <div class="school-entry">
+    <img src="/school_s_logos/ISEN.svg" alt="Logo ISEN">
+    <div class="school-text">
+      <h3>ISEN Nantes</h3>
+      <p>test test </p>
+    </div>
+  </div>
+
+  <div class="school-entry reverse">
+    <img src="/school_s_logos/Fabert.svg" alt="Logo Lycée Fabert">
+    <div class="school-text">
+      <h3>Lycée Fabert</h3>
+      <p>Baccalauréat scientifique obtenu à Metz</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2>Contact</h2>
+  <div class="footer-buttons">
+    <a href="mailto:arthur.grossmann--le-mauguen@isen-ouest.yncrea.fr">Outlook</a>
+    <a class="linkedin" href="https://www.linkedin.com/in/arthur-grossmann-le-mauguen-45094b205/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+  function resetLanguageSwitch() {
+    const toggle = document.getElementById('langToggle');
+    if (toggle) {
+      toggle.checked = false;
+    }
+  }
+
+  window.addEventListener('load', resetLanguageSwitch);
+
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted) {
+      window.location.reload();
+    }
+  });
+
+  document.getElementById('langToggle').addEventListener('change', function () {
+    if (this.checked)
