@@ -218,7 +218,6 @@ input:checked + .slider:before {
     }
   }
 
-  // Run on regular page load
   window.addEventListener('load', resetLanguageSwitch);
 
   window.addEventListener('pageshow', function (event) {
@@ -227,14 +226,11 @@ input:checked + .slider:before {
     }
   });
 
-
   document.getElementById('langToggle').addEventListener('change', function () {
     if (this.checked) {
       window.location.href = 'indexUK.html';
     }
   });
-</script>
-
 </script>
 </body>
 </html>
