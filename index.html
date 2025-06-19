@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Arthur GLM - Étudiant Ingénieur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      margin: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-weight: normal;
+      color: #555;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .bio {
+      max-width: 600px;
+      margin-right: 40px;
+    }
+
+    .photo {
+      flex-shrink: 0;
+    }
+
+    .photo img {
+      max-width: 200px;
+      border-radius: 12px;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-buttons {
+      margin-top: 15px;
+    }
+
+    .footer-buttons a {
+      text-decoration: none;
+      color: white;
+      background-color: #0072c6;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .footer-buttons a.linkedin {
+      background-color: #0077b5;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .bio {
+        margin: 0;
+      }
+
+      .photo {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Arthur GLM</h1>
+  <nav>
+    <a href="formations.html">Formations</a>
+    <a href="projets.html">Projets</a>
+    <a href="experiences.html">Expériences professionnelles</a>
+    <a href="engagements.html">Engagements associatifs</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Arthur GLM</h1>
+  <h2>Étudiant en école d'ingénieur en M2</h2>
+</section>
+
+<section class="content">
+  <div class="bio">
+    <p>Actuellement en dernière année d’école d’ingénieur à l’ISEN Nantes, je me spécialise dans le développement logiciel, l’intelligence artificielle et l’analyse de données. Curieux, autonome et investi, je mène de nombreux projets techniques et associatifs, aussi bien dans un cadre académique que personnel. Je suis également passionné par la fabrication numérique, la voile et la vulgarisation scientifique.</p>
+  </div>
+  <div class="photo">
+    <img src="images/photo_profil.jpg" alt="Photo d'Arthur GLM">
+  </div>
+</section>
+
+<footer>
+  <h2>Contact</h2>
+  <div class="footer-buttons">
+    <a href="mailto:arthur.glm@example.com">Outlook</a>
+    <a class="linkedin" href="https://www.linkedin.com/in/arthurglm/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>
