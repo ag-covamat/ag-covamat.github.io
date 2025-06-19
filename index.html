@@ -44,7 +44,7 @@
 .hero-container {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   max-width: 1000px;
   gap: 30px;
 }
@@ -70,16 +70,19 @@
       align-items: center;
       padding: 40px 20px;
     }
-    .bio {
-      max-width: 600px;
+    .hero-info {
+      max-width: 600px; 
+      flex-shrink: 0;
       margin-right: 40px;
     }
     .photo {
+      max-width: 350px; /* or flex-basis: 35%; */
       flex-shrink: 0;
     }
     .photo img {
-      max-width: 350px;
+      max-width: 100%;
       border-radius: 12px;
+      display: block;
     }
     .linkedin-post {
       margin: 40px 20px; 
