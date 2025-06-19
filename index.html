@@ -34,18 +34,35 @@
     nav a:hover {
       text-decoration: underline;
     }
+
     .hero {
-      text-align: center;
-      margin: 40px 20px;
-    }
-    .hero h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    .hero h2 {
-      font-weight: normal;
-      color: #555;
-    }
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  gap: 30px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-weight: normal;
+  color: #555;
+}
+
     .content {
       display: flex;
       flex-wrap: wrap;
@@ -125,7 +142,7 @@
     border-radius: 50%;
   }
   input:checked + .slider {
-    background-color: #0077b5; /* or any color you like */
+    background-color: #0077b5; 
   }
   input:checked + .slider:before {
     transform: translateX(26px);
@@ -165,7 +182,7 @@
     </div>
   </nav>
 </header>
-
+<!--
 <section class="hero">
   <h1>Arthur Grossmann Le Mauguen</h1>
   <h2>Étudiant en école d'ingénieur en M2</h2>
@@ -177,6 +194,19 @@
   </div>
   <div class="photo">
     <img src="images/photo_profil.jpg" alt="Photo d'Arthur GLM">
+  </div>
+</section>
+-->
+<section class="hero">
+  <div class="hero-container">
+    <div class="photo">
+      <img src="images/photo_profil.jpg" alt="Photo d'Arthur GLM">
+    </div>
+    <div class="hero-text">
+      <h1>Arthur Grossmann Le Mauguen</h1>
+      <h2>Étudiant en école d'ingénieur en M2</h2>
+      <p>Étudiant en dernière année à CentraleSupélec Rennes dans la filière Numérique et Vivant, après un semestre à Heriot-Watt University à Édimbourg axé sur le big data, les statistiques, la gestion de bases de données et l’énergie. Parcours initial à l’ISEN Nantes, école d’ingénieurs généraliste, après un bac scientifique spécialité informatique et sciences du numérique. Je suis actuellement à la recherche d’un stage de fin d’études, avec une mobilité possible en France et en Europe.</p>
+    </div>
   </div>
 </section>
 
