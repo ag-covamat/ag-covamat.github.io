@@ -202,6 +202,12 @@
   display: block;
 }
 
+.photo-container {
+  flex-shrink: 0;
+  padding-right: 20px; 
+  box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
@@ -239,15 +245,16 @@
   </nav>
 </header>
 
-
 <section class="hero-container">
-  <div class="hero-info">
-    <h1>Arthur Grossmann Le Mauguen</h1>
-    <h2>Étudiant en école d'ingénieur en M2</h2>
-    <p>Étudiant en dernière année à CentraleSupélec Rennes dans la filière Numérique et Vivant, après un semestre à Heriot-Watt University à Édimbourg axé sur le big data, les statistiques, la gestion de bases de données et l’énergie. Parcours initial à l’ISEN Nantes, école d’ingénieurs généraliste, après un bac scientifique spécialité informatique et sciences du numérique. Je suis actuellement à la recherche d’un stage de fin d’études, avec une mobilité possible en France et en Europe.</p>
-  </div>
-  <div class="photo">
-    <img src="images/photo_profil.jpg" alt="Photo d'Arthur GLM">
+  <div class="container">
+    <div class="hero-info">
+      <h1>Arthur Grossmann Le Mauguen</h1>
+      <h2>Étudiant en école d'ingénieur en M2</h2>
+      <p>Étudiant en dernière année à CentraleSupélec Rennes dans la filière Numérique et Vivant, après un semestre à Heriot-Watt University à Édimbourg axé sur le big data, les statistiques, la gestion de bases de données et l’énergie. Parcours initial à l’ISEN Nantes, école d’ingénieurs généraliste, après un bac scientifique spécialité informatique et sciences du numérique. Je suis actuellement à la recherche d’un stage de fin d’études, avec une mobilité possible en France et en Europe.</p>
+    </div>
+    <div class="photo">
+      <img src="images/photo_profil.jpg" alt="Photo d'Arthur GLM">
+    </div>
   </div>
 </section>
   
