@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+
+  <head>
   <meta charset="UTF-8">
   <title>Arthur Grossmann Le Mauguen CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -14,44 +16,36 @@
       background-color: #f9f9f9;
       color: #333;
     }
-
     header {
       background-color: #1a1a1a;
       color: white;
       padding: 20px 0;
       text-align: center;
     }
-
     nav {
       margin-top: 10px;
     }
-
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
     .hero {
       text-align: center;
       margin: 40px 20px;
     }
-
     .hero h1 {
       font-size: 2.5em;
       margin-bottom: 10px;
     }
-
     .hero h2 {
       font-weight: normal;
       color: #555;
     }
-
     .content {
       display: flex;
       flex-wrap: wrap;
@@ -59,21 +53,17 @@
       align-items: center;
       padding: 40px 20px;
     }
-
     .bio {
       max-width: 600px;
       margin-right: 40px;
     }
-
     .photo {
       flex-shrink: 0;
     }
-
     .photo img {
       max-width: 200px;
       border-radius: 12px;
     }
-
     footer {
       background-color: #1a1a1a;
       color: white;
@@ -81,11 +71,9 @@
       padding: 15px 20px;
       margin-top: 30px;
     }
-
     .footer-buttons {
       margin-top: 15px;
     }
-
     .footer-buttons a {
       text-decoration: none;
       color: white;
@@ -97,7 +85,6 @@
       font-weight: bold;
       display: inline-block;
     }
-
     .footer-buttons a.linkedin {
       background-color: #0077b5;
     }
@@ -107,58 +94,55 @@
       font-size: 1.8em;
       color: #0077b5;
    }
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-}
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 24px;
-}
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-input:checked + .slider {
-  background-color: #0077b5; /* or any color you like */
-}
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-    @media (max-width: 768px) {
-      .content {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .bio {
-        margin: 0;
-      }
-
-      .photo {
-        margin-top: 20px;
-      }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  input:checked + .slider {
+    background-color: #0077b5; /* or any color you like */
+  }
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      text-align: center;
     }
+    .bio {
+      margin: 0;
+    }
+    .photo {
+      margin-top: 20px;
+    }
+  }
+    
   </style>
 </head>
 <body>
@@ -197,8 +181,6 @@ input:checked + .slider:before {
 
 <section class="linkedin-post">
   <h2 class="linkedin-title">Mes derniers posts LinkedIn</h2>
-  <!--<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7260541550412075009" height="516" width="504" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>-->
-  <!-- Elfsight LinkedIn Feed | Untitled LinkedIn Feed -->
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
   <div class="elfsight-app-0527803f-898b-4ac5-bc53-6d1ff2c7e1ba" data-elfsight-app-lazy></div>
 </section>
@@ -210,6 +192,7 @@ input:checked + .slider:before {
     <a class="linkedin" href="https://www.linkedin.com/in/arthur-grossmann-le-mauguen-45094b205/" target="_blank">LinkedIn</a>
   </div>
 </footer>
+  
 <script>
   function resetLanguageSwitch() {
     const toggle = document.getElementById('langToggle');
@@ -217,20 +200,18 @@ input:checked + .slider:before {
       toggle.checked = false;
     }
   }
-
   window.addEventListener('load', resetLanguageSwitch);
-
   window.addEventListener('pageshow', function (event) {
     if (event.persisted) {
       window.location.reload();
     }
   });
-
   document.getElementById('langToggle').addEventListener('change', function () {
     if (this.checked) {
       window.location.href = 'indexUK.html';
     }
   });
 </script>
+  
 </body>
 </html>
