@@ -207,12 +207,30 @@ input:checked + .slider:before {
   </div>
 </footer>
 <script>
-  document.getElementById('langToggle').addEventListener('change', function() {
+  function resetLanguageSwitch() {
+    const toggle = document.getElementById('langToggle');
+    if (toggle) {
+      toggle.checked = false;
+    }
+  }
+
+  // Run on regular page load
+  window.addEventListener('load', resetLanguageSwitch);
+
+  // Also run if returning via browser "back" (from cache)
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted) {
+      resetLanguageSwitch();
+    }
+  });
+
+  document.getElementById('langToggle').addEventListener('change', function () {
     if (this.checked) {
-      // when the switch is turned on, go to htmlUK.html
       window.location.href = 'indexUK.html';
     }
   });
+</script>
+
 </script>
 </body>
 </html>
