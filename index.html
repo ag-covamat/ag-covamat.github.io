@@ -162,7 +162,56 @@
       margin-top: 20px;
     }
   }
-    
+
+  .hero-container {
+  display: flex;
+  align-items: flex-start; /* aligns top of photo with top of h1 */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.hero-info {
+  max-width: 600px;
+}
+
+.hero-info h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-info h2 {
+  font-weight: normal;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.hero-info p {
+  margin-top: 0;
+}
+
+.photo img {
+  max-width: 400px;
+  border-radius: 12px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-info {
+    max-width: 100%;
+  }
+  .photo img {
+    max-width: 80%;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -185,16 +234,12 @@
     </div>
   </nav>
 </header>
-  
-<section class="hero">
-  <div class="hero-text">
+
+
+<section class="hero-container">
+  <div class="hero-info">
     <h1>Arthur Grossmann Le Mauguen</h1>
     <h2>Étudiant en école d'ingénieur en M2</h2>
-  </div>
-</section>
-
-<section class="content">
-  <div class="bio">
     <p>Étudiant en dernière année à CentraleSupélec Rennes dans la filière Numérique et Vivant, après un semestre à Heriot-Watt University à Édimbourg axé sur le big data, les statistiques, la gestion de bases de données et l’énergie. Parcours initial à l’ISEN Nantes, école d’ingénieurs généraliste, après un bac scientifique spécialité informatique et sciences du numérique. Je suis actuellement à la recherche d’un stage de fin d’études, avec une mobilité possible en France et en Europe.</p>
   </div>
   <div class="photo">
