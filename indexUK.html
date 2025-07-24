@@ -270,25 +270,16 @@
 </footer>
   
 <script>
-  function resetLanguageSwitch() {
-    const toggle = document.getElementById('langToggle');
-    if (toggle) {
-      toggle.checked = false;
-    }
-  }
-  window.addEventListener('load', resetLanguageSwitch);
   window.addEventListener('pageshow', function (event) {
     if (event.persisted) {
       window.location.reload();
     }
   });
   document.getElementById('langToggle').addEventListener('change', function () {
-    if (this.checked) {
-      window.location.href = 'indexUK.html';
-    }else {
+    if (!this.checked) {
       window.location.href = 'index.html';
     }
-  });
+   });
 </script>
   
 </body>
