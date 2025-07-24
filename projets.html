@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+  <meta charset="UTF-8">
+  <title>Arthur Grossmann Le Mauguen CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 1000px;
+  gap: 15px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-weight: normal;
+  color: #555;
+}
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .hero-info {
+      max-width: 600px; 
+      flex-shrink: 0;
+      margin-right: 40px;
+    }
+    .photo {
+      max-width: 300px; 
+      flex-shrink: 1;
+    }
+    .photo img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+    .linkedin-post {
+      margin: 40px 20px; 
+    }
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+      margin-top: 30px;
+    }
+    .footer-buttons {
+      margin-top: 15px;
+    }
+    .footer-buttons a {
+      text-decoration: none;
+      color: white;
+      background-color: #0072c6;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .footer-buttons a.linkedin {
+      background-color: #0077b5;
+    }
+    .linkedin-title {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.8em;
+      color: #0077b5;
+   }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  input:checked + .slider {
+    background-color: #0077b5; 
+  }
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .bio {
+      margin: 0;
+    }
+    .photo {
+      margin-top: 20px;
+    }
+  }
+
+  .hero-container {
+  display: flex;
+  align-items: flex-start; 
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.hero-info {
+  max-width: 600px;
+}
+
+.hero-info h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero-info h2 {
+  font-weight: normal;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.hero-info p {
+  margin-top: 0;
+}
+
+.photo img {
+  max-width: 400px;
+  border-radius: 12px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-info {
+    max-width: 90%;
+  }
+  .photo img {
+    max-width: 70%;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="formations.html">Formations</a>
+    <a href="projets.html">Projets</a>
+    <a href="experiences.html">Expériences professionnelles</a>
+    <a href="engagements.html">Engagements associatifs</a>
+    <a href="contact.html">Contact</a>
+    <div style="display: inline-flex; align-items: center; gap: 8px; margin-left: 20px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="Français" title="Français" style="height: 18px; max-width: 30px;">
+      <label class="switch" title="Passer en version anglaise">
+        <input type="checkbox" id="langToggle">
+        <span class="slider round"></span>
+      </label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="English" title="English" style="height: 18px; max-width: 30px;">
+    </div>
+  </nav>
+</header>
+
+
+<section class="hero-container">
+  <div class="hero-info">
+    <h1>Mes projets</h1>
+    <h2>Heriot Watt University</h2>
+  </div>
+  <div class="photo">
+    <img src="images/photo_profil.jpg" alt="Photo d'Arthur GLM">
+  </div>
+</section>
+  
+<footer>
+  <h2>Contact</h2>
+  <div class="footer-buttons">
+    <a href="mailto:arthur.grossmann--le-mauguen@isen-ouest.yncrea.fr">Outlook</a>
+    <a class="linkedin" href="https://www.linkedin.com/in/arthur-grossmann-le-mauguen-45094b205/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+  
+<script>
+  function resetLanguageSwitch() {
+    const toggle = document.getElementById('langToggle');
+    if (toggle) {
+      toggle.checked = false;
+    }
+  }
+  window.addEventListener('load', resetLanguageSwitch);
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted) {
+      window.location.reload();
+    }
+  });
+  document.getElementById('langToggle').addEventListener('change', function () {
+    if (this.checked) {
+      window.location.href = 'indexUK.html';
+    }
+  });
+</script>
+  
+</body>
+</html>
