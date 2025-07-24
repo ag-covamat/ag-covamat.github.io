@@ -231,7 +231,7 @@
     <div style="display: inline-flex; align-items: center; gap: 8px; margin-left: 20px;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="Français" title="Français" style="height: 18px; max-width: 30px;">
       <label class="switch" title="Passer en version anglaise">
-        <input type="checkbox" id="langToggle" id="langToggle" checked>
+        <input type="checkbox" id="langToggle" checked>
         <span class="slider round"></span>
       </label>
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="English" title="English" style="height: 18px; max-width: 30px;">
@@ -286,6 +286,8 @@
   document.getElementById('langToggle').addEventListener('change', function () {
     if (this.checked) {
       window.location.href = 'indexUK.html';
+    }else {
+      window.location.href = 'index.html';
     }
   });
 </script>
