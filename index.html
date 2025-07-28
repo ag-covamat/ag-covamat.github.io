@@ -1,315 +1,439 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-  <head>
-  <meta charset="UTF-8">
-  <title>Arthur Grossmann Le Mauguen CV</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #1a1a1a;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
+<head>
+    <meta charset="UTF-8">
+    <title>Tutos COVAMAT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="/images/toutfaire.jpg">
 
-    .hero {
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px;
-}
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #eef2f7;
+            color: #333;
+        }
 
-.hero-container {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  max-width: 1000px;
-  gap: 15px;
-}
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-.hero-text {
-  max-width: 600px;
-}
+        nav {
+            margin-top: 10px;
+        }
 
-.hero h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
-.hero h2 {
-  font-weight: normal;
-  color: #555;
-}
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-    }
-    .hero-info {
-      max-width: 600px; 
-      flex-shrink: 0;
-      margin-right: 30px;
-    }
-    .photo {
-      max-width: 400px; 
-      flex-shrink: 1;
-    }
-    .photo img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      display: block;
-    }
-    .linkedin-post {
-      margin: 40px 20px; 
-    }
-    footer {
-      background-color: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 15px 20px;
-      margin-top: 30px;
-    }
-    .footer-buttons {
-      margin-top: 15px;
-    }
-    .footer-buttons a {
-      text-decoration: none;
-      color: white;
-      background-color: #0072c6;
-      border: none;
-      padding: 10px 20px;
-      margin: 0 10px;
-      border-radius: 5px;
-      font-weight: bold;
-      display: inline-block;
-    }
-    .footer-buttons a.linkedin {
-      background-color: #0077b5;
-    }
-    .linkedin-title {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 1.8em;
-      color: #0077b5;
-   }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
-  }
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 24px;
-  }
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-  }
-  input:checked + .slider {
-    background-color: #0077b5; 
-  }
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
-  @media (max-width: 768px) {
-    .content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .bio {
-      margin: 0;
-    }
-    .photo {
-      margin-top: 20px;
-      margin: 0 auto;
-      display: block;
-    }
-    nav {
-      display: flex; 
-      flex-wrap: wrap; 
-      justify-content: center; 
-      padding: 10px 0;
-    }
-    nav a {
-      white-space: normal; 
-      font-size: 0.95em; 
-      padding: 5px 8px; 
-    }
-    .lang-switcher { 
-      margin-left: 0; 
-      margin-top: 10px; 
-      width: 100%; 
-      justify-content: center; 
-      display: flex; 
-    }
-  }
-  
+        .hero {
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #eef2f7;
+        }
 
-  .hero-container {
-  display: flex;
-  align-items: flex-start; 
-  gap: 30px;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
+        .hero-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            max-width: 1500px;
+            gap: 15px;
+        }
 
-.hero-info {
-  max-width: 600px;
-}
+        .hero-text {
+            max-width: 600px;
+        }
 
-.hero-info h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
+        .hero h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
 
-.hero-info h2 {
-  font-weight: normal;
-  color: #555;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
+        .hero h2 {
+            font-weight: normal;
+            color: #555;
+        }
 
-.hero-info p {
-  margin-top: 0;
-}
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
 
-.photo img {
-  max-width: 400px;
-  border-radius: 12px;
-  display: block;
-}
+        .hero-info {
+            max-width: 600px;
+            flex-shrink: 0;
+            margin-right: 30px;
+        }
 
-@media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .hero-info {
-    max-width: 90%;
-  }
-  .photo img {
-    max-width: 70%;
-  }
-}
+        .photo {
+            max-width: 400px;
+            flex-shrink: 1;
+        }
 
-  </style>
+        .photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .linkedin-post {
+            margin: 40px 20px;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: 30px;
+        }
+
+        .footer-buttons {
+            margin-top: 15px;
+        }
+
+        .footer-buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: #0072c6;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .footer-buttons a.linkedin {
+            background-color: #0077b5;
+        }
+
+        .linkedin-title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.8em;
+            color: #0077b5;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #0077b5;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .bio {
+                margin: 0;
+            }
+
+            .photo {
+                margin-top: 20px;
+                margin: 0 auto;
+                display: block;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px 0;
+            }
+
+            nav a {
+                white-space: normal;
+                font-size: 0.95em;
+                padding: 5px 8px;
+            }
+
+            .lang-switcher {
+                margin-left: 0;
+                margin-top: 10px;
+                width: 100%;
+                justify-content: center;
+                display: flex;
+            }
+        }
+
+
+        .hero-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .hero-info {
+            max-width: 600px;
+        }
+
+        .hero-info h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .hero-info h2 {
+            font-weight: normal;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .hero-info p {
+            margin-top: 0;
+        }
+
+        .photo img {
+            max-width: 1000px;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .hero-info {
+            max-width: 90%;
+        }
+
+        .photo img {
+            max-width: 100%;
+        }
+
+        .download-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Styles for password prompt */
+        #password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #password-prompt {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #password-prompt input {
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        #password-prompt button {
+            background-color: #0077b5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        #password-prompt button:hover {
+            background-color: #005f91;
+        }
+
+        #error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        /* Hide content by default */
+        #main-content {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="formations.html">Formations</a>
-    <a href="projets.html">Projets</a>
-    <a href="experiences.html">Expériences professionnelles</a>
-    <a href="engagements.html">Engagements associatifs</a>
-    <a href="contact.html">Contact</a>
-    <div style="display: inline-flex; align-items: center; gap: 8px; margin-left: 20px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="Français" title="Français" style="height: 18px; max-width: 30px;">
-      <label class="switch" title="Passer en version anglaise">
-        <input type="checkbox" id="langToggle">
-        <span class="slider round"></span>
-      </label>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="English" title="English" style="height: 18px; max-width: 30px;">
+    <div id="password-overlay">
+        <div id="password-prompt">
+            <h2>Accès Protégé</h2>
+            <p>Veuillez entrer le mot de passe pour accéder au contenu.</p>
+            <input type="password" id="password-input" placeholder="Mot de passe">
+            <button id="submit-password">Accéder</button>
+            <p id="error-message" style="display: none;">Mot de passe incorrect.</p>
+        </div>
     </div>
-  </nav>
-</header>
 
+    <div id="main-content">
+        <header>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="tfi.html">TFI</a>
+                <a href="outlook.html">Outlook</a>
+                <a href="gmail.html">GMAIL</a>
+                <a href="discord.html">Discord</a>
+                <a href="docadmin.html">Documents administratifs</a>
+                <a href="releve_km.html">Relevé kilométrique véhicules</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
 
-<section class="hero-container">
-  <div class="hero-info">
-    <h1>Arthur Grossmann Le Mauguen</h1>
-    <h2>Étudiant en école d'ingénieur en M2</h2>
-    <p>Actuellement en double diplôme CentraleSupélec – ISEN dans le cadre du programme Freemoov, je poursuis ma dernière année d’études à CentraleSupélec Rennes dans la spécialisation Numérique et Vivant. Ce parcours s’inscrit dans la continuité de ma formation d’ingénieur généraliste à l’ISEN Nantes.</p>
-    <p>J’ai également effectué un semestre d’échange à Heriot-Watt University à Édimbourg, où j’ai approfondi des thématiques telles que le big data, les statistiques, la gestion de bases de données et les enjeux liés à l’énergie.</p>
-    <p>Je suis actuellement à la recherche d’un stage de fin d’études, avec une mobilité possible en France comme en Europe.</p>
-  </div>
-  <div class="photo">
-    <img src="images/photo_profil.jpg" alt="Photo d'Arthur GLM">
-  </div>
-</section>
-  
-<h2 class="linkedin-title">Mes derniers posts LinkedIn</h2>
-  <!--
-<section class="hero-container">
-  <script src="https://static.elfsight.com/platform/platform.js" async></script>
-  <div class="elfsight-app-0527803f-898b-4ac5-bc53-6d1ff2c7e1ba" data-elfsight-app-lazy></div>
-</section>
-  -->
+        <section class="hero-container">
+            <div class="hero-info">
+                <h1>Tutoriels COVAMAT</h1>
+                <p>Sur ce site vous trouverez tous les tutoriels pour utiliser les outils du groupe COVAMAT:</p>
+                <p>- TFI</p>
+                <p>- Outlook</p>
+                <p>- GMAIL</p>
+                <p>- Discord</p>
+                <p>- Documents administratifs</p>
+                <p>- Relevé kilométrique des véhicules</p>
+                <p>- Contact</p>
+            </div>
 
-<footer>
-  <h2>Contact</h2>
-  <div class="footer-buttons">
-    <a href="mailto:arthur.grossmann--le-mauguen@isen-ouest.yncrea.fr">Outlook</a>
-    <a class="linkedin" href="https://www.linkedin.com/in/arthur-grossmann-le-mauguen-45094b205/" target="_blank">LinkedIn</a>
-  </div>
-</footer>
-  
-<script>
-  function resetLanguageSwitch() {
-    const toggle = document.getElementById('langToggle');
-    if (toggle) {
-      toggle.checked = false;
-    }
-  }
-  window.addEventListener('load', resetLanguageSwitch);
-  window.addEventListener('pageshow', function (event) {
-    if (event.persisted) {
-      window.location.reload();
-    }
-  });
-  document.getElementById('langToggle').addEventListener('change', function () {
-    if (this.checked) {
-      window.location.href = 'indexUK.html';
-    }
-  });
-</script>
-  
+            <div class="photo">
+                <img src="images/photo_profil.jpg">
+            </div>
+        </section>
+
+        <footer>
+            <button id="logout-button" style="background-color: #dc3545; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 20px;">Déconnexion</button>
+        </footer>
+    </div>
+
+    <script>
+        // Le mot de passe que vous souhaitez utiliser
+        const CORRECT_PASSWORD = "monmotdepassesecret"; // CHANGEZ CECI !
+
+        const passwordOverlay = document.getElementById('password-overlay');
+        const passwordInput = document.getElementById('password-input');
+        const submitPasswordBtn = document.getElementById('submit-password');
+        const errorMessage = document.getElementById('error-message');
+        const mainContent = document.getElementById('main-content');
+        const logoutButton = document.getElementById('logout-button');
+
+        function checkAuthentication() {
+            // Vérifie si l'utilisateur est déjà authentifié via LocalStorage
+            const isAuthenticated = localStorage.getItem('isAuthenticated');
+
+            if (isAuthenticated === 'true') {
+                showContent();
+            } else {
+                showPasswordPrompt();
+            }
+        }
+
+        function showPasswordPrompt() {
+            passwordOverlay.style.display = 'flex'; // Affiche l'overlay de mot de passe
+            mainContent.style.display = 'none'; // Cache le contenu principal
+        }
+
+        function showContent() {
+            passwordOverlay.style.display = 'none'; // Cache l'overlay de mot de passe
+            mainContent.style.display = 'block'; // Affiche le contenu principal
+        }
+
+        function authenticate() {
+            const enteredPassword = passwordInput.value;
+
+            if (enteredPassword === CORRECT_PASSWORD) {
+                localStorage.setItem('isAuthenticated', 'true'); // Stocke l'état d'authentification
+                showContent();
+                errorMessage.style.display = 'none';
+            } else {
+                errorMessage.style.display = 'block'; // Affiche le message d'erreur
+            }
+            passwordInput.value = ''; // Efface le champ de mot de passe
+        }
+
+        function logout() {
+            localStorage.removeItem('isAuthenticated'); // Supprime l'état d'authentification
+            showPasswordPrompt();
+        }
+
+        // Écouteurs d'événements
+        submitPasswordBtn.addEventListener('click', authenticate);
+        passwordInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                authenticate();
+            }
+        });
+        logoutButton.addEventListener('click', logout);
+
+        // Appelle la fonction de vérification au chargement de la page
+        document.addEventListener('DOMContentLoaded', checkAuthentication);
+    </script>
 </body>
+
 </html>
