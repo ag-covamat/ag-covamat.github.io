@@ -14,6 +14,22 @@ header {
     text-align: center;
 }
 
+.photo {
+    /* Définis la taille maximale du conteneur de la photo ici. */
+    /* Une taille fixe ou une taille maximale. Par exemple, 400px pour desktop. */
+    max-width: 400px; /* Limite le conteneur de la photo sur les grands écrans */
+    flex-shrink: 0; /* Empêche le conteneur de la photo de rétrécir si l'espace est limité */
+    flex-basis: auto; /* Permet au navigateur de calculer la taille en fonction du contenu */
+}
+
+.photo img {
+    width: 100%; /* L'image prend 100% de la largeur de son parent (.photo) */
+    height: auto; /* Maintient le ratio d'aspect */
+    display: block; /* Supprime l'espace sous l'image */
+    border-radius: 12px; /* Pour les coins arrondis */
+    /* **Important : supprime toutes les autres définitions de max-width pour .photo img !** */
+}
+
 nav {
     /* Pas de marge globale ici, la gestion de l'espacement sera faite dans la media query */
 }
@@ -164,18 +180,8 @@ footer {
     margin-top: 0;
 }
 
-.photo img {
-    max-width: 1000px;
-    border-radius: 12px;
-    display: block;
-}
-
 .hero-info {
     max-width: 90%;
-}
-
-.photo img {
-    max-width: 100%;
 }
 
 .download-buttons {
