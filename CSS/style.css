@@ -71,7 +71,7 @@ nav a:hover {
     flex-shrink: 0;
     margin-right: 30px;
 }
-
+/*
 .photo {
     max-width: 400px;
     flex-shrink: 1;
@@ -83,7 +83,7 @@ nav a:hover {
     border-radius: 12px;
     display: block;
 }
-
+*/
 .linkedin-post {
     margin: 40px 20px;
 }
