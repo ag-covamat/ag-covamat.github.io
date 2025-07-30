@@ -111,6 +111,104 @@ footer {
     display: inline-block;
 }
 
+.contact-section {
+    background-color: #eef2f7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 1.8em;
+    color: #005288;
+    margin-bottom: 20px;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-item {
+    flex: 1 1 calc(33.333% - 40px);
+    min-width: 280px;
+    max-width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.contact-item h2 {
+    font-size: 1.2em;
+    color: #005288;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.contact-card p {
+    margin: 10px 0;
+    font-size: 1em;
+    width: 100%;
+}
+
+.outlook-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #0078d4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    line-height: 1;
+    height: fit-content;
+}
+
+.outlook-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.call-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    line-height: 1;
+    height: fit-content;
+}
+
+.call-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    filter: invert(100%) brightness(200%);
+}
+
+
 /* Responsive styles */
 @media (max-width: 768px) {
     header {
@@ -147,6 +245,17 @@ footer {
         padding: 8px 12px; /* Augmentation du padding des liens pour faciliter le tap */
         margin: 0; /* Supprime les marges individuelles pour utiliser le 'gap' */
         flex-shrink: 0; /* Empêche les liens de rétrécir */
+    }
+
+    .contact-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    .qr-grid {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
