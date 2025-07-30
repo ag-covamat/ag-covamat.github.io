@@ -179,21 +179,22 @@
             transform: translateX(26px);
         }
 
+        /* Responsive styles */
         @media (max-width: 768px) {
-            .content {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+            .hero-container {
+                flex-direction: column; /* Empile les éléments en colonne */
+                align-items: center; /* Centre les éléments */
             }
 
-            .bio {
-                margin: 0;
+            .hero-info {
+                order: 1; /* Le texte vient en premier */
+                margin-right: 0;
             }
 
             .photo {
+                order: 2; /* La photo vient après le texte */
                 margin-top: 20px;
-                margin: 0 auto;
-                display: block;
+                margin-bottom: 20px; /* Ajout d'une marge en bas de la photo pour l'espacement */
             }
 
             nav {
@@ -363,7 +364,7 @@
             </div>
 
             <div class="photo">
-                <img src="images/photo_profil.jpg">
+                <img src="images/photo_profil.jpg" alt="Photo de profil">
             </div>
         </section>
 
@@ -373,7 +374,7 @@
     </div>
 
     <script>
-        const CORRECT_PASSWORD = "motdepassesupersecret"; 
+        const CORRECT_PASSWORD = "motdepassesupersecret";
 
         const passwordOverlay = document.getElementById('password-overlay');
         const passwordInput = document.getElementById('password-input');
