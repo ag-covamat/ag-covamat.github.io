@@ -27,7 +27,6 @@ header {
     height: auto; /* Maintient le ratio d'aspect */
     display: block; /* Supprime l'espace sous l'image */
     border-radius: 12px; /* Pour les coins arrondis */
-    /* **Important : supprime toutes les autres définitions de max-width pour .photo img !** */
 }
 
 nav {
@@ -241,4 +240,74 @@ footer {
 /* Hide content by default */
 #main-content {
     display: none;
+}
+
+/* QR Codes specific styles */
+.qr-codes {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #eef2f7;
+}
+
+.qr-codes h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.qr-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.qr-item {
+    max-width: 180px;
+    text-align: center;
+}
+
+.qr-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.qr-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.qr-item a {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #0077b5;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .qr-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        padding: 10px 0;
+    }
+
+    nav a {
+        padding: 5px 8px;
+    }
+}
+
+/* Logout button style */
+#logout-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
 }
