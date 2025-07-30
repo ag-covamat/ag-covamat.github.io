@@ -1,411 +1,133 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Informatique</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/jpeg" href="/images/toutfaire.jpg">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #eef2f7;
-      color: #333;
-    }
-
-    header {
-      background-color: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    footer {
-      background-color: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 15px 20px;
-      margin-top: 30px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-section {
-      background-color: #eef2f7;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .contact-section h2 {
-      font-size: 1.8em;
-      color: #005288;
-      margin-bottom: 20px;
-    }
-
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .contact-item {
-      flex: 1 1 calc(33.333% - 40px);
-      min-width: 280px;
-      max-width: calc(33.333% - 40px);
-      box-sizing: border-box;
-      text-align: left;
-    }
-
-    .contact-item h2 {
-      font-size: 1.2em;
-      color: #005288;
-      margin: 10px 0;
-      text-align: left;
-    }
-
-  .contact-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: flex-start;
-  }
-
-  .contact-card p {
-    margin: 10px 0;
-    font-size: 1em;
-    width: 100%;
-  }
-
-  .outlook-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #0078d4;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    white-space: nowrap;
-    line-height: 1;
-    height: fit-content;
-  }
-
-  .outlook-button img {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-  }
-
-  .call-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #28a745;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    white-space: nowrap;
-    line-height: 1;
-    height: fit-content;
-  }
-
-  .call-button img {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    filter: invert(100%) brightness(200%);
-  }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .contact-item {
-        flex: 1 1 calc(50% - 40px);
-        max-width: calc(50% - 40px);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .contact-item {
-        flex: 0 0 100%;
-        max-width: 100%;
-        min-width: unset;
-      }
-
-      nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 10px 0;
-            }
-
-            nav a {
-                white-space: normal;
-                font-size: 0.95em;
-                padding: 5px 8px;
-            }
-    }
-
-    /* Styles for password prompt */
-    #password-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    #password-prompt {
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    #password-prompt input {
-      padding: 10px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      width: 200px;
-    }
-
-    #password-prompt button {
-      background-color: #0077b5;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-
-    #password-prompt button:hover {
-      background-color: #005f91;
-    }
-
-    #error-message {
-      color: red;
-      margin-top: 10px;
-    }
-
-    /* Hide main content by default */
-    #main-content {
-      display: none;
-    }
-  </style>
-</head>
+    <meta charset="UTF-8">
+    <title>Contact Informatique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="/images/toutfaire.jpg">
+    <link rel="stylesheet" href="./CSS/style.css"> </head>
 
 <body>
 
-  <div id="password-overlay">
-    <div id="password-prompt">
-      <h2>Accès Protégé</h2>
-      <p>Veuillez entrer le mot de passe pour accéder au contenu.</p>
-      <input type="password" id="password-input" placeholder="Mot de passe">
-      <button id="submit-password">Accéder</button>
-      <p id="error-message" style="display: none;">Mot de passe incorrect.</p>
+    <div id="password-overlay">
+        <div id="password-prompt">
+            <h2>Accès Protégé</h2>
+            <p>Veuillez entrer le mot de passe pour accéder au contenu.</p>
+            <input type="password" id="password-input" placeholder="Mot de passe">
+            <button id="submit-password">Accéder</button>
+            <p id="error-message" style="display: none;">Mot de passe incorrect.</p>
+        </div>
     </div>
-  </div>
 
-  <div id="main-content">
-    <header>
-        <nav>
-          <a href="index.html">Accueil</a>
-          <a href="tfi.html">TFI</a>
-          <a href="outlook.html">Outlook</a>
-          <a href="gmail.html">GMAIL</a>
-          <a href="discord.html">Discord</a>
-          <a href="docadmin.html">Documents administratifs</a>
-          <a href="releve_km.html">Relevé kilométrique véhicules</a>
-          <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+    <div id="main-content">
+        <header>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="tfi.html">TFI</a>
+                <a href="outlook.html">Outlook</a>
+                <a href="gmail.html">GMAIL</a>
+                <a href="discord.html">Discord</a>
+                <a href="docadmin.html">Documents administratifs</a>
+                <a href="releve_km.html">Relevé kilométrique véhicules</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
 
-    <section class="contact-section">
-      <div class="contact-grid">
+        <section class="contact-section">
+            <div class="contact-grid">
 
-        <div class="contact-item">
-          <h2>Informatique & TSE</h2>
-          <div class="contact-card">
-            <p><strong>Nom :</strong> Xavier</p>
-            <p><strong>Email :</strong> xavier@gmail.com</p>
-            <p><strong>Téléphone :</strong> +33 6 61 40 34 48</p>
-            <a href="mailto:xavier@gmail.com" class="outlook-button">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/langfr-1024px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="Outlook Logo">
-              Envoyer un mail
-            </a>
-            <a href="tel:+33661403448" class="call-button">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Phone_font_awesome.svg" alt="Phone Icon">
-              Appeler
-            </a>
-          </div>
-        </div>
+                <div class="contact-item">
+                    <h2>Informatique & TSE</h2>
+                    <div class="contact-card">
+                        <p><strong>Nom :</strong> Xavier</p>
+                        <p><strong>Email :</strong> xavier@gmail.com</p>
+                        <p><strong>Téléphone :</strong> +33 6 61 40 34 48</p>
+                        <a href="mailto:xavier@gmail.com" class="outlook-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/langfr-1024px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="Outlook Logo">
+                            Envoyer un mail
+                        </a>
+                        <a href="tel:+33661403448" class="call-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Phone_font_awesome.svg" alt="Phone Icon">
+                            Appeler
+                        </a>
+                    </div>
+                </div>
 
-        <div class="contact-item">
-          <h2>TFI</h2>
-          <div class="contact-card">
-            <p><strong>Email :</strong> tfi@toutfaire.pro</p>
-            <p><strong>Téléphone :</strong> +33 3 29 83 32 89</p>
-            <a href="mailto:tfi@toutfaire.pro" class="outlook-button">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/langfr-1024px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="Outlook Logo">
-              Envoyer un mail
-            </a>
-            <a href="tel:+33329833289" class="call-button">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Phone_font_awesome.svg" alt="Phone Icon">
-              Appeler
-            </a>
-          </div>
-        </div>
+                <div class="contact-item">
+                    <h2>TFI</h2>
+                    <div class="contact-card">
+                        <p><strong>Email :</strong> tfi@toutfaire.pro</p>
+                        <p><strong>Téléphone :</strong> +33 3 29 83 32 89</p>
+                        <a href="mailto:tfi@toutfaire.pro" class="outlook-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/langfr-1024px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="Outlook Logo">
+                            Envoyer un mail
+                        </a>
+                        <a href="tel:+33329833289" class="call-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Phone_font_awesome.svg" alt="Phone Icon">
+                            Appeler
+                        </a>
+                    </div>
+                </div>
 
-        <div class="contact-item">
-          <h2>Discord</h2>
-          <div class="contact-card">
-            <p><strong>Nom :</strong> Frédéric Badier </p>
-            <p><strong>Email :</strong> f.badier@toutfaire.pro</p>
-            <p><strong>Téléphone :</strong> +33 X XX XX XX XX</p>
-            <a href="mailto:f.badier@toutfaire.pro" class="outlook-button">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/langfr-1024px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="Outlook Logo">
-              Envoyer un mail
-            </a>
-            <a href="tel:+33XXXXXXXXX" class="call-button">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Phone_font_awesome.svg" alt="Phone Icon">
-              Appeler
-            </a>
-          </div>
-        </div>
+                <div class="contact-item">
+                    <h2>Discord</h2>
+                    <div class="contact-card">
+                        <p><strong>Nom :</strong> Frédéric Badier </p>
+                        <p><strong>Email :</strong> f.badier@toutfaire.pro</p>
+                        <p><strong>Téléphone :</strong> +33 X XX XX XX XX</p>
+                        <a href="mailto:f.badier@toutfaire.pro" class="outlook-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/langfr-1024px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="Outlook Logo">
+                            Envoyer un mail
+                        </a>
+                        <a href="tel:+33XXXXXXXXX" class="call-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Phone_font_awesome.svg" alt="Phone Icon">
+                            Appeler
+                        </a>
+                    </div>
+                </div>
 
-        <div class="contact-item">
-          <h2>Ressources Humaines</h2>
-          <div class="contact-card">
-            <p><strong>Nom :</strong> Jennifer Laval</p>
-            <p><strong>Email :</strong> j.laval@toutfaire.pro </p>
-            <p><strong>Téléphone :</strong> +33 X XX XX XX XX</p>
-            <a href="mailto:j.laval@toutfaire.pro " class="outlook-button">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/langfr-1024px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="Outlook Logo">
-              Envoyer un mail
-            </a>
-            <a href="tel:+33XXXXXXXXX" class="call-button">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Phone_font_awesome.svg" alt="Phone Icon">
-              Appeler
-            </a>
-          </div>
-        </div>
+                <div class="contact-item">
+                    <h2>Ressources Humaines</h2>
+                    <div class="contact-card">
+                        <p><strong>Nom :</strong> Jennifer Laval</p>
+                        <p><strong>Email :</strong> j.laval@toutfaire.pro </p>
+                        <p><strong>Téléphone :</strong> +33 X XX XX XX XX</p>
+                        <a href="mailto:j.laval@toutfaire.pro " class="outlook-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/langfr-1024px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="Outlook Logo">
+                            Envoyer un mail
+                        </a>
+                        <a href="tel:+33XXXXXXXXX" class="call-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Phone_font_awesome.svg" alt="Phone Icon">
+                            Appeler
+                        </a>
+                    </div>
+                </div>
 
-        <div class="contact-item">
-          <h2>Solvabilité & en cours client </h2>
-          <div class="contact-card">
-            <p><strong>Nom :</strong> Séverine Dorflinger </p>
-            <p><strong>Email :</strong> s.dorflinger@toutfaire.pro </p>
-            <p><strong>Téléphone :</strong> +33 X XX XX XX XX</p>
-            <a href="mailto:s.dorflinger@toutfaire.pro " class="outlook-button">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/langfr-1024px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="Outlook Logo">
-              Envoyer un mail
-            </a>
-            <a href="tel:+33XXXXXXXXX" class="call-button">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Phone_font_awesome.svg" alt="Phone Icon">
-              Appeler
-            </a>
-          </div>
-        </div>
+                <div class="contact-item">
+                    <h2>Solvabilité & en cours client </h2>
+                    <div class="contact-card">
+                        <p><strong>Nom :</strong> Séverine Dorflinger </p>
+                        <p><strong>Email :</strong> s.dorflinger@toutfaire.pro </p>
+                        <p><strong>Téléphone :</strong> +33 X XX XX XX XX</p>
+                        <a href="mailto:s.dorflinger@toutfaire.pro " class="outlook-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/langfr-1024px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" alt="Outlook Logo">
+                            Envoyer un mail
+                        </a>
+                        <a href="tel:+33XXXXXXXXX" class="call-button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Phone_font_awesome.svg" alt="Phone Icon">
+                            Appeler
+                        </a>
+                    </div>
+                </div>
 
-      </div>
-    </section>
+            </div>
+        </section>
 
-    <footer>
-      <button id="logout-button" style="background-color: #dc3545; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 20px;">Déconnexion</button>
-    </footer>
-  </div>
+        <footer>
+            <button id="logout-button">Déconnexion</button>
+        </footer>
+    </div>
 
-  <script>
-    // Définissez votre mot de passe secret ici
-    const CORRECT_PASSWORD = "motdepassesupersecret";
-
-    const passwordOverlay = document.getElementById('password-overlay');
-    const passwordInput = document.getElementById('password-input');
-    const submitPasswordBtn = document.getElementById('submit-password');
-    const errorMessage = document.getElementById('error-message');
-    const mainContent = document.getElementById('main-content');
-    const logoutButton = document.getElementById('logout-button');
-
-    function checkAuthentication() {
-      // Vérifie si l'utilisateur est déjà authentifié via LocalStorage
-      const isAuthenticated = localStorage.getItem('isAuthenticated');
-
-      if (isAuthenticated === 'true') {
-        showContent();
-      } else {
-        showPasswordPrompt();
-      }
-    }
-
-    function showPasswordPrompt() {
-      passwordOverlay.style.display = 'flex'; // Affiche l'overlay de mot de passe
-      mainContent.style.display = 'none'; // Cache le contenu principal
-    }
-
-    function showContent() {
-      passwordOverlay.style.display = 'none'; // Cache l'overlay de mot de passe
-      mainContent.style.display = 'block'; // Affiche le contenu principal
-    }
-
-    function authenticate() {
-      const enteredPassword = passwordInput.value;
-
-      if (enteredPassword === CORRECT_PASSWORD) {
-        localStorage.setItem('isAuthenticated', 'true'); // Stocke l'état d'authentification
-        showContent();
-        errorMessage.style.display = 'none';
-      } else {
-        errorMessage.style.display = 'block'; // Affiche le message d'erreur
-      }
-      passwordInput.value = ''; // Efface le champ de mot de passe
-    }
-
-    function logout() {
-      localStorage.removeItem('isAuthenticated'); // Supprime l'état d'authentification
-      showPasswordPrompt();
-    }
-
-    // Écouteurs d'événements
-    submitPasswordBtn.addEventListener('click', authenticate);
-    passwordInput.addEventListener('keypress', function(event) {
-      if (event.key === 'Enter') {
-        authenticate();
-      }
-    });
-    logoutButton.addEventListener('click', logout);
-
-    // Appelle la fonction de vérification au chargement de la page
-    document.addEventListener('DOMContentLoaded', checkAuthentication);
-  </script>
-</body>
+    <script src="./JS/script.js"></script> </body>
 </html>
