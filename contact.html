@@ -147,12 +147,25 @@
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .contact-item {
         flex: 0 0 100%;
         max-width: 100%;
         min-width: unset;
       }
+
+      nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px 0;
+            }
+
+            nav a {
+                white-space: normal;
+                font-size: 0.95em;
+                padding: 5px 8px;
+            }
     }
 
     /* Styles for password prompt */
