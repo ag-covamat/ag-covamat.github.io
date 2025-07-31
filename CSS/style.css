@@ -420,3 +420,34 @@ footer {
     cursor: pointer;
     margin-top: 20px;
 }
+
+/* --- Bouton de Téléchargement Jaune --- */
+.download-button {
+    display: inline-block;
+    background-color: #FFD700; /* Jaune or */
+    color: #333; /* Texte foncé pour un bon contraste */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px; /* Coins légèrement arrondis */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation douce */
+    margin: 10px; /* Espace entre les boutons si plusieurs */
+    text-align: center;
+}
+
+.download-button:hover {
+    background-color: #E6C200; /* Jaune légèrement plus foncé au survol */
+    transform: translateY(-2px); /* Léger effet de soulèvement */
+}
+
+/* Conteneur pour les boutons de téléchargement pour mieux les organiser */
+.download-buttons-container {
+    display: flex;
+    flex-direction: column; /* Empile les boutons verticalement par défaut */
+    align-items: center; /* Centre les boutons */
+    gap: 15px; /* Espace entre les boutons */
+    margin-top: 20px; /* Marge au-dessus des boutons */
+}
