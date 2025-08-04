@@ -10,33 +10,35 @@ body {
 header {
     background-color: #1a1a1a;
     color: white;
-    padding: 20px 0; /* Padding par défaut pour les écrans plus grands */
+    padding: 20px 0; 
     text-align: center;
 }
 
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 30px;
+}
+
 .photo {
-    /* Définis la taille maximale du conteneur de la photo ici. */
-    /* Une taille fixe ou une taille maximale. Par exemple, 400px pour desktop. */
-    max-width: 400px; /* Limite le conteneur de la photo sur les grands écrans */
-    flex-shrink: 0; /* Empêche le conteneur de la photo de rétrécir si l'espace est limité */
-    flex-basis: auto; /* Permet au navigateur de calculer la taille en fonction du contenu */
+    max-width: 400px; 
+    flex-shrink: 0; 
+    flex-basis: auto; 
 }
 
 .photo img {
-    width: 100%; /* L'image prend 100% de la largeur de son parent (.photo) */
-    height: auto; /* Maintient le ratio d'aspect */
-    display: block; /* Supprime l'espace sous l'image */
-    border-radius: 12px; /* Pour les coins arrondis */
-}
-
-nav {
-    /* Pas de marge globale ici, la gestion de l'espacement sera faite dans la media query */
+    width: 100%; 
+    height: auto;
+    display: block; 
+    border-radius: 12px; 
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px; /* Marge par défaut entre les liens pour les écrans plus grands */
+    margin: 0 15px; 
     font-weight: bold;
 }
 
@@ -85,14 +87,6 @@ nav a:hover {
     max-width: 600px;
     flex-shrink: 0;
     margin-right: 30px;
-}
-
-footer {
-    background-color: #1a1a1a;
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
-    margin-top: 30px;
 }
 
 .footer-buttons {
@@ -208,57 +202,6 @@ footer {
     filter: invert(100%) brightness(200%);
 }
 
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 0; /* Padding du header pour mobile, consistent avec l'autre fichier */
-    }
-
-    .hero-container {
-        flex-direction: column; /* Empile les éléments en colonne */
-        align-items: center; /* Centre les éléments */
-    }
-
-    .hero-info {
-        order: 1; /* Le texte vient en premier */
-        margin-right: 0;
-    }
-
-    .photo {
-        order: 2; /* La photo vient après le texte */
-        margin-top: 20px;
-        margin-bottom: 20px; /* Ajout d'une marge en bas de la photo pour l'espacement */
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px 10px; /* Padding interne de la nav pour mobile */
-        gap: 10px 15px; /* Espacement entre les liens pour mobile */
-    }
-
-    nav a {
-        white-space: normal;
-        font-size: 0.95em;
-        padding: 8px 12px; /* Augmentation du padding des liens pour faciliter le tap */
-        margin: 0; /* Supprime les marges individuelles pour utiliser le 'gap' */
-        flex-shrink: 0; /* Empêche les liens de rétrécir */
-    }
-
-    .contact-item {
-        flex: 0 0 100%;
-        max-width: 100%;
-        min-width: unset;
-    }
-
-    .qr-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 .hero-container {
     display: flex;
     align-items: flex-start;
@@ -295,6 +238,147 @@ footer {
 .download-buttons {
     flex-direction: column;
     align-items: center;
+}
+
+.qr-codes {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #eef2f7;
+}
+
+.qr-codes h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.qr-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.qr-item {
+    max-width: 180px;
+    text-align: center;
+}
+
+.qr-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.qr-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.qr-item a {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #0077b5;
+    font-weight: bold;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #FFD700; 
+    color: #333; 
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px; 
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    margin: 10px; 
+    text-align: center;
+}
+
+.download-button:hover {
+    background-color: #E6C200; 
+    transform: translateY(-2px); 
+}
+
+.download-buttons-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+    margin-top: 20px; 
+}
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 (hauteur/largeur) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 20px; 
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0; 
+    }
+
+    .hero-container {
+        flex-direction: column; /* Empile les éléments en colonne */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .hero-info {
+        order: 1; /* Le texte vient en premier */
+        margin-right: 0;
+    }
+
+    .photo {
+        order: 2; 
+        margin-top: 20px;
+        margin-bottom: 20px; 
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 10px; 
+        gap: 10px 15px; 
+    }
+
+    nav a {
+        white-space: normal;
+        font-size: 0.95em;
+        padding: 8px 12px; 
+        margin: 0; 
+        flex-shrink: 0; 
+    }
+
+    .contact-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    .qr-grid {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* Styles for password prompt */
@@ -351,65 +435,6 @@ footer {
     display: none;
 }
 
-/* QR Codes specific styles */
-.qr-codes {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #eef2f7;
-}
-
-.qr-codes h1 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-.qr-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.qr-item {
-    max-width: 180px;
-    text-align: center;
-}
-
-.qr-item img {
-    width: 100%;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-}
-
-.qr-item p {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.qr-item a {
-    display: inline-block;
-    margin-top: 5px;
-    text-decoration: none;
-    color: #0077b5;
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    .qr-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav {
-        padding: 10px 0;
-    }
-
-    nav a {
-        padding: 5px 8px;
-    }
-}
-
 /* Logout button style */
 #logout-button {
     background-color: #dc3545;
@@ -421,51 +446,3 @@ footer {
     margin-top: 20px;
 }
 
-/* --- Bouton de Téléchargement Jaune --- */
-.download-button {
-    display: inline-block;
-    background-color: #FFD700; /* Jaune or */
-    color: #333; /* Texte foncé pour un bon contraste */
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px; /* Coins légèrement arrondis */
-    text-decoration: none; /* Supprime le soulignement par défaut */
-    font-weight: bold;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation douce */
-    margin: 10px; /* Espace entre les boutons si plusieurs */
-    text-align: center;
-}
-
-.download-button:hover {
-    background-color: #E6C200; /* Jaune légèrement plus foncé au survol */
-    transform: translateY(-2px); /* Léger effet de soulèvement */
-}
-
-/* Conteneur pour les boutons de téléchargement pour mieux les organiser */
-.download-buttons-container {
-    display: flex;
-    flex-direction: column; /* Empile les boutons verticalement par défaut */
-    align-items: center; /* Centre les boutons */
-    gap: 15px; /* Espace entre les boutons */
-    margin-top: 20px; /* Marge au-dessus des boutons */
-}
-
-/* Rend le conteneur de la vidéo responsive */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Ratio 16:9 (hauteur/largeur) */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    margin-top: 20px; /* Ajoute un peu d'espace au-dessus */
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
