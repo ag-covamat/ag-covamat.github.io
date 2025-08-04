@@ -1,4 +1,3 @@
-/* Styles de base */
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -11,19 +10,81 @@ body {
 header {
     background-color: #1a1a1a;
     color: white;
-    padding: 20px 0;
+    padding: 20px 0; /* Padding par défaut pour les écrans plus grands */
     text-align: center;
+}
+
+.photo {
+    /* Définis la taille maximale du conteneur de la photo ici. */
+    /* Une taille fixe ou une taille maximale. Par exemple, 400px pour desktop. */
+    max-width: 400px; /* Limite le conteneur de la photo sur les grands écrans */
+    flex-shrink: 0; /* Empêche le conteneur de la photo de rétrécir si l'espace est limité */
+    flex-basis: auto; /* Permet au navigateur de calculer la taille en fonction du contenu */
+}
+
+.photo img {
+    width: 100%; /* L'image prend 100% de la largeur de son parent (.photo) */
+    height: auto; /* Maintient le ratio d'aspect */
+    display: block; /* Supprime l'espace sous l'image */
+    border-radius: 12px; /* Pour les coins arrondis */
+}
+
+nav {
+    /* Pas de marge globale ici, la gestion de l'espacement sera faite dans la media query */
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 15px; /* Marge par défaut entre les liens pour les écrans plus grands */
     font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #eef2f7;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 1500px;
+    gap: 15px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-weight: normal;
+    color: #555;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.hero-info {
+    max-width: 600px;
+    flex-shrink: 0;
+    margin-right: 30px;
 }
 
 footer {
@@ -33,91 +94,6 @@ footer {
     padding: 15px 20px;
     margin-top: 30px;
 }
-
-#logout-button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-/* --- Styles pour la section principale (Tutoriels TFI) --- */
-
-.hero-container {
-    display: flex; /* Permet d'aligner les enfants côte à côte */
-    align-items: flex-start; /* Aligne les éléments en haut */
-    gap: 30px; /* Espace entre la colonne de gauche et la photo */
-    max-width: 1500px; /* Largeur maximale pour le conteneur principal */
-    margin: 40px auto; /* Centre le conteneur principal horizontalement et ajoute une marge */
-    padding: 0 20px;
-}
-
-.content-left {
-    flex: 1; /* Prend l'espace disponible */
-    display: flex;
-    flex-direction: column; /* Empile les éléments les uns en dessous des autres */
-    gap: 20px; /* Espace entre le titre/description et le conteneur de boutons */
-}
-
-.hero-info h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.hero-info p {
-    font-weight: normal;
-    color: #555;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.photo {
-    flex-shrink: 0; /* Empêche la photo de rétrécir */
-    max-width: 400px; /* Taille maximale pour la photo sur grands écrans */
-}
-
-.photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
-}
-
-/* --- Boutons de téléchargement --- */
-.download-buttons-container {
-    display: flex;
-    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne suivante */
-    gap: 15px; /* Espace entre les boutons, horizontalement et verticalement */
-    justify-content: flex-start; /* Aligne les boutons à gauche */
-}
-
-.download-button {
-    display: inline-block;
-    background-color: #FFD700; /* Jaune or */
-    color: #333;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-align: center;
-    box-sizing: border-box; /* Important pour que le padding et la bordure ne changent pas la taille totale */
-    flex: 1 1 23%; /* Permet d'avoir 4 boutons par ligne avec un peu d'espace */
-}
-
-.download-button:hover {
-    background-color: #E6C200;
-    transform: translateY(-2px);
-}
-
-/* --- Styles pour les autres pages/sections (non modifiés) --- */
-/* ... (Les styles pour les contacts, les QR codes, la boîte de mot de passe, etc., sont conservés ci-dessous) ... */
 
 .footer-buttons {
     margin-top: 15px;
@@ -232,6 +208,96 @@ footer {
     filter: invert(100%) brightness(200%);
 }
 
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0; /* Padding du header pour mobile, consistent avec l'autre fichier */
+    }
+
+    .hero-container {
+        flex-direction: column; /* Empile les éléments en colonne */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .hero-info {
+        order: 1; /* Le texte vient en premier */
+        margin-right: 0;
+    }
+
+    .photo {
+        order: 2; /* La photo vient après le texte */
+        margin-top: 20px;
+        margin-bottom: 20px; /* Ajout d'une marge en bas de la photo pour l'espacement */
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 10px; /* Padding interne de la nav pour mobile */
+        gap: 10px 15px; /* Espacement entre les liens pour mobile */
+    }
+
+    nav a {
+        white-space: normal;
+        font-size: 0.95em;
+        padding: 8px 12px; /* Augmentation du padding des liens pour faciliter le tap */
+        margin: 0; /* Supprime les marges individuelles pour utiliser le 'gap' */
+        flex-shrink: 0; /* Empêche les liens de rétrécir */
+    }
+
+    .contact-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    .qr-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.hero-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.hero-info {
+    max-width: 600px;
+}
+
+.hero-info h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero-info h2 {
+    font-weight: normal;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hero-info p {
+    margin-top: 0;
+}
+
+.hero-info {
+    max-width: 90%;
+}
+
+.download-buttons {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for password prompt */
 #password-overlay {
     position: fixed;
     top: 0;
@@ -280,10 +346,12 @@ footer {
     margin-top: 10px;
 }
 
+/* Hide content by default */
 #main-content {
     display: none;
 }
 
+/* QR Codes specific styles */
 .qr-codes {
     padding: 40px 20px;
     text-align: center;
@@ -328,66 +396,58 @@ footer {
     font-weight: bold;
 }
 
-/* --- Styles responsives --- */
 @media (max-width: 768px) {
-    header {
-        padding: 15px 0;
-    }
-
-    .hero-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .photo {
-        order: 1; /* La photo est déplacée en premier pour la version mobile */
-        margin-top: 20px;
-        margin-bottom: 20px;
-        max-width: 90%; /* Ajuste la largeur de la photo pour les petits écrans */
-    }
-
-    .content-left {
-        order: 2; /* Le texte et les boutons sont déplacés après la photo */
-        width: 100%;
-    }
-
-    .hero-info {
-        text-align: center;
-        max-width: 100%;
-    }
-
-    .download-buttons-container {
-        justify-content: center; /* Centre les boutons sur mobile */
-    }
-
-    .download-button {
-        flex: 1 1 45%; /* Affiche 2 boutons par ligne sur les petits écrans */
-    }
-    
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px 10px;
-        gap: 10px 15px;
-    }
-
-    nav a {
-        white-space: normal;
-        font-size: 0.95em;
-        padding: 8px 12px;
-        margin: 0;
-        flex-shrink: 0;
-    }
-
-    .contact-item {
-        flex: 0 0 100%;
-        max-width: 100%;
-        min-width: unset;
-    }
-
     .qr-grid {
         flex-direction: column;
         align-items: center;
     }
+    nav {
+        padding: 10px 0;
+    }
+
+    nav a {
+        padding: 5px 8px;
+    }
+}
+
+/* Logout button style */
+#logout-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* --- Bouton de Téléchargement Jaune --- */
+.download-button {
+    display: inline-block;
+    background-color: #FFD700; /* Jaune or */
+    color: #333; /* Texte foncé pour un bon contraste */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px; /* Coins légèrement arrondis */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation douce */
+    margin: 10px; /* Espace entre les boutons si plusieurs */
+    text-align: center;
+}
+
+.download-button:hover {
+    background-color: #E6C200; /* Jaune légèrement plus foncé au survol */
+    transform: translateY(-2px); /* Léger effet de soulèvement */
+}
+
+/* Conteneur pour les boutons de téléchargement pour mieux les organiser */
+.download-buttons-container {
+    display: flex;
+    flex-direction: column; /* Empile les boutons verticalement par défaut */
+    align-items: center; /* Centre les boutons */
+    gap: 15px; /* Espace entre les boutons */
+    margin-top: 20px; /* Marge au-dessus des boutons */
 }
